@@ -27,7 +27,7 @@ func Run(isGm bool, isClient bool, end chan bool) {
 				Timeout:             5 * time.Second,
 				PermitWithoutStream: true,
 			}),
-			grpc.WithBlock(),
+			//grpc.WithBlock(),
 			grpc.FailOnNonTempDialError(true),
 			grpc.WithDefaultCallOptions(
 				grpc.MaxCallRecvMsgSize(constant.MaxRecvMessageSize),
